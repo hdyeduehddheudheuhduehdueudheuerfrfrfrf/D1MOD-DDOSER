@@ -20,9 +20,6 @@ git clone https://github.com/mrxD1MOD/D1MOD-DDOSER.git
 cd D1MOD-DDSOER
 chmod +x D1MOD.py
 python2 D1MOD.py <url>
-
-
-
 ```
 
 ***HOW TO RUN IN KALI-LINUX***
