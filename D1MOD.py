@@ -67,8 +67,8 @@ def referer_list():
 	headers_referers.append('http://www.google.com/?q=')
 	headers_referers.append('http://www.usatoday.com/search/results?q=')
 	headers_referers.append('http://engadget.search.aol.com/search?q=')
-  headers_referers.append('https://cloudfare.com')
-  headers_referers.append('https://wordpress.org')
+  headers_referers.append('https://cloudfare.com/search?q=')
+  headers_referers.append('https://wordpress.org/search?q=')
 	headers_referers.append('http://' + host + '/')
 	return(headers_referers)
 	
