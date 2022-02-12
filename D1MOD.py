@@ -83,7 +83,7 @@ def usage():
 	print 'USAGE: python2 D1MOD.py <url>'
 	print 'MADE BY D1MOD https://discord.gg/d1mod'
   print '1877 TEAM https://1877.team/'
-  print '1877 TEAM https://t.me/x1877x'
+  print '1877 TEAM CHANNEL https://t.me/x1877x'
 	print '---------------------------------------------------'
 
 	
