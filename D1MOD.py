@@ -58,40 +58,6 @@ ONE_BROWSER_QUERYS_LIMIT = 1500
 
 ANTI_DDOS_SLEEP_SECS = 600
 
-# LAYER4 CODED BY D1MOD
-class Layer4(Thread):
-    _method: str
-    _target: Tuple[str, int]
-    _ref: Any
-    SENT_FLOOD: Any
-    _amp_payloads = cycle
-
-    def __init__(self, target: Tuple[str, int],
-                 ref: List[str] = None,
-                 method: str = "TCP",
-                 synevent: Event = None):
-        super().__init__(daemon=True)
-        self._amp_payload = None
-        self._amp_payloads = cycle([])
-        self._ref = ref
-        self._method = method
-        self._target = target
-        self._synevent = synevent
-        
-        
-# GET HTTP FLOOD
-class HttpFlood(Thread):
-    _proxies: cycle = None
-    _payload: str
-    _defaultpayload: Any
-    _req_type: str
-    _useragents: List[str]
-    _referers: List[str]
-    _target: URL
-    _method: str
-    _rpc: int
-    _synevent: Any
-    SENT_FLOOD: Any
 
 
 
