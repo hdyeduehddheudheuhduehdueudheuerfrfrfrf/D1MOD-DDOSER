@@ -24,7 +24,7 @@ python2 D1MOD.py <url>```
 
 ***HOW TO RUN IN KALI-LINUX***
 
-``git clone git clone https://github.com/mrxD1MOD/D1MOD-DDOSER.git``
-``cd D1MOD-DDOSER``
-``chmod +x D1MOD.py``
-``python2 D1MOD.py <url>``
+```git clone git clone https://github.com/mrxD1MOD/D1MOD-DDOSER.git
+cd D1MOD-DDOSER
+chmod +x D1MOD.py
+python2 D1MOD.py <url>````
