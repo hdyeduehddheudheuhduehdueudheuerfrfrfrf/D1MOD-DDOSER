@@ -48,21 +48,20 @@ def useragent_list():
 	return(headers_useragents)
 
 # CLOUDFLARE BYPASSER BY D1MOD
-def cloudflare_bypass(self, r):
-        body = r.text
-        scheme = re.search(r'^([\w]*)', r.url).group(1)
-        domain = re.search(r'\/\/([^\/]*)', r.url).group(1)
-        submit_url = '{}://{}/cdn-cgi/l/chk_jschl'.format(scheme, domain)
-        jschl_vc = re.search(r'name="jschl_vc" value="(\w+)"', body).group(1)
-        pas = re.search(r'name="pass" value="(.+?)"', body).group(1)
-        jschl_answer = str(self.solve_challenge(body) + len(domain))
-        time.sleep(5)
-        return '{0}?jschl_vc={1}&pass={2}&jschl_answer={3}'.format(submit_url, jschl_vc, pas, jschl_answer)
+#def cloudflare_bypass(self, r):
+       # body = r.text
+        #scheme = re.search(r'^([\w]*)', r.url).group(1)
+        #domain = re.search(r'\/\/([^\/]*)', r.url).group(1)
+        #submit_url = '{}://{}/cdn-cgi/l/chk_jschl'.format(scheme, domain)
+        #jschl_vc = re.search(r'name="jschl_vc" value="(\w+)"', body).group(1)
+      #  pas = re.search(r'name="pass" value="(.+?)"', body).group(1)
+        #jschl_answer = str(self.solve_challenge(body) + len(domain))
+    #    time.sleep(5)
+     #   return '{0}?jschl_vc={1}&pass={2}&jschl_answer={3}'.format(submit_url, jschl_vc, pas, jschl_answer)
 
-ONE_BROWSER_QUERYS_LIMIT = 1500
+#ONE_BROWSER_QUERYS_LIMIT = 1500
 
-ANTI_DDOS_SLEEP_SECS = 600
-
+#ANTI_DDOS_SLEEP_SECS = 600
 
 
 
