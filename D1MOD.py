@@ -157,7 +157,7 @@ class MonitorThread(threading.Thread):
 		previous=request_counter
 		while flag==0:
 			if (previous+100<request_counter) & (previous<>request_counter):
-				print "%d ATTACKED BY D1MOD1877 ✓" % ()
+				print "%d ATTACKED BY D1MOD1877 ✓" % (request_counter)
 				previous=request_counter
 		if flag==2:
 			print "\n-- D1MOD Attack Finished --"
