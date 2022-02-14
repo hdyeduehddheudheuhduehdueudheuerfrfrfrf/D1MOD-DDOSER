@@ -57,9 +57,9 @@ ONE_BROWSER_QUERYS_LIMIT = 1500
 
 ANTI_DDOS_SLEEP_SECS = 600
 
-    async with CloudflareScraper() as session:
-        async with session.get(url) as resp:
-            return await resp.text()
+         CloudflareScraper() as session:
+        session.get(url) as resp:
+             resp.text()
 ######################################################################################################################
 
 
