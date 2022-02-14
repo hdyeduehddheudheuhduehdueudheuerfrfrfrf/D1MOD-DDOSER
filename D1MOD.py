@@ -55,11 +55,7 @@ def cloudflare_bypass(self, r):
 
 ONE_BROWSER_QUERYS_LIMIT = 1500
 
-ANTI_DDOS_SLEEP_SECS = 600
-
-         CloudflareScraper() as session:
-        session.get(url) as resp:
-             resp.text()
+ANTI_DDOS_SLEEP_SECS = 10000
 ######################################################################################################################
 
 
