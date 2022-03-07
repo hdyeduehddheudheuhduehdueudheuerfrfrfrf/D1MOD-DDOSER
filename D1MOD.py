@@ -44,7 +44,6 @@ def useragent_list():
 
 
 #genarate proxy
-from lxml.html import fromstring
 import requests
 import traceback
 
