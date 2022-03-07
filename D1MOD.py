@@ -81,8 +81,9 @@ def buildblock(size):
 def usage():
 	print '---------------------------------------------------'
 	print 'USAGE : python2 D1MOD.py <url>'
-  print 'BLACK SHOP : https://d1modshop.ml'
-  print 'TELEGRAM CHANNEL : https://t.me/the_dead_team'
+        print 'BLACK SHOP : https://d1modshop.ml'
+        print 'TELEGRAM CHANNEL : https://t.me/the_dead_team'
+	print 'TELEGRAM GROUP : https://t.me/the_dead_team2'
 	print 'DISCORD SERVER : https://discord.gg/hn7epsef4Z'
 	print '---------------------------------------------------'
 
@@ -137,7 +138,7 @@ class MonitorThread(threading.Thread):
 		previous=request_counter
 		while flag==0:
 			if (previous+100<request_counter) & (previous<>request_counter):
-				print "%d Requests Sent" % (request_counter)
+				print "%d ATTACKED BY D1MOD1877 -->  " % (request_counter)
 				previous=request_counter
 		if flag==2:
 			print "\n-- D1MOD Attack FINISHED --"
