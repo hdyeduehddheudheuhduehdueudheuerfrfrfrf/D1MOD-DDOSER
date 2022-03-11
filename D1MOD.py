@@ -101,7 +101,25 @@ def httpcall(url):
 	except urllib2.HTTPError, e:
 			#print e.code
 			set_flag(1)
-			print '--> ATTACKED BY D1MOD <--'
+			print '.=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.'
+			print '|                ATTACKED STARTED                |'
+	                print '|                     ______                     |'
+	                print '|                  .-"      "-.                  |'
+	                print '|                 /            \                 |'
+	                print '|     _          |              |          _     |'
+	                print '|    ( \         |,  .-.  .-.  ,|         / )    |'
+	                print '|     > "=._     | )(__/  \__)( |     _.=" <     |'
+	                print '|    (_/"=._"=._ |/     /\     \| _.="_.="\_)    |'
+	                print '|           "=._"(_     ^^     _)"_.="           |'
+	                print '|               "=\__|IIIIII|__/="               |'
+	                print '|              _.="| \IIIIII/ |"=._              |'
+	                print '|    _     _.="_.="\          /"=._"=._     _    |'
+	                print '|   ( \_.="_.="     `--------`     "=._"=._/ )   |'
+	                print '|    > _.="                            "=._ <    |'
+	                print '|   (_/           MADE BY D1MOD18          \_)   |'
+	                print '|           https://discord.gg/hn7epsef4Z        |'
+	                print '|               https://d1modshop.ml             |'
+	                print ''-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='''
 			code=500
 	except urllib2.URLError, e:
 			#print e.reason
