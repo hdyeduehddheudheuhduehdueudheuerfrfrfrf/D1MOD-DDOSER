@@ -180,7 +180,6 @@ else:
 	                print '|           https://discord.gg/hn7epsef4Z        |'
 	                print '|               https://d1modshop.ml             |'
 	                print  '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
-		if len(sys.argv)== 3:
 			if sys.argv[2]=="safe":
 				set_safe()
 		url = sys.argv[1]
