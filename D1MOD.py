@@ -161,25 +161,7 @@ else:
 		usage()
 		sys.exit()
 	else:
-		        print '.=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.'
-			print '|                ATTACKED STARTED                |'
-	                print '|                     ______                     |'
-	                print '|                  .-"      "-.                  |'
-	                print '|                 /            \                 |'
-	                print '|     _          |              |          _     |'
-	                print '|    ( \         |,  .-.  .-.  ,|         / )    |'
-	                print '|     > "=._     | )(__/  \__)( |     _.=" <     |'
-	                print '|    (_/"=._"=._ |/     /\     \| _.="_.="\_)    |'
-	                print '|           "=._"(_     ^^     _)"_.="           |'
-	                print '|               "=\__|IIIIII|__/="               |'
-	                print '|              _.="| \IIIIII/ |"=._              |'
-	                print '|    _     _.="_.="\          /"=._"=._     _    |'
-	                print '|   ( \_.="_.="     `--------`     "=._"=._/ )   |'
-	                print '|    > _.="                            "=._ <    |'
-	                print '|   (_/           MADE BY D1MOD18          \_)   |'
-	                print '|           https://discord.gg/hn7epsef4Z        |'
-	                print '|               https://d1modshop.ml             |'
-	                print  '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
+		print "_<-- D1MOD ATTACK STARTED --->"
 			if sys.argv[2]=="safe":
 				set_safe()
 		url = sys.argv[1]
