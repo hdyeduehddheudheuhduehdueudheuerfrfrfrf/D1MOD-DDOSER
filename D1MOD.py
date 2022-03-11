@@ -77,7 +77,7 @@ def usage():
 	print '|   (_/           MADE BY D1MOD18          \_)   |'
 	print '|           https://discord.gg/hn7epsef4Z        |'
 	print '|               https://d1modshop.ml             |'
-	print ''-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=''
+	print  '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
 
 #http request
 def httpcall(url):
@@ -119,7 +119,7 @@ def httpcall(url):
 	                print '|   (_/           MADE BY D1MOD18          \_)   |'
 	                print '|           https://discord.gg/hn7epsef4Z        |'
 	                print '|               https://d1modshop.ml             |'
-	                print ''-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='''
+	                print  '-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-='
 			code=500
 	except urllib2.URLError, e:
 			#print e.reason
